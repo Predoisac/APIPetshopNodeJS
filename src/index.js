@@ -1,6 +1,6 @@
 import express from "express"
 import database from "./config/database.js"
-import router from "./routes/client.js"
+import router from "./routes/petshop.js"
 
 const api = express()
 api.use(express.json())

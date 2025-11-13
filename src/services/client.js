@@ -11,13 +11,13 @@ class ServiceClient {
 
         return client
     }
-    async Create(name, phone) {
-        await Client.model.create({ name, phone })
+    async Create(nameClient, phone) {
+        await Client.model.create({ nameClient, phone })
     }
-    async Update(id, name, phone) {
+    async Update(id, nameClient, phone) {
         const client = await Client.model.findByPk(id)
 
-        client.name = name
+        client.nameClient = nameClient
         client.phone = phone
 
         await client.save()

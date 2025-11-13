@@ -22,8 +22,8 @@ class ControllerClient {
     }
     async Create(req, res) {
         try {
-            const {name, phone} = req.body
-            await ServiceClient.Create(name, phone)
+            const {nameClient, phone} = req.body
+            await ServiceClient.Create(nameClient, phone)
 
             res.status(201).send()
         } catch (error) {
@@ -33,8 +33,8 @@ class ControllerClient {
     async Update(req, res) {
         try {
             const id = req.params.id
-            const {name, phone} = req.body
-            await ServiceClient.Update(id, name, phone)
+            const {nameClient, phone} = req.body
+            await ServiceClient.Update(id, nameClient, phone)
 
             res.status(200).send()
         } catch (error) {
